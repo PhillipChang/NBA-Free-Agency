@@ -1,0 +1,39 @@
+<h1>NBA Free Agency!</h1>
+
+<h2>Roster</h2>
+
+<ul>
+  {{#each players}}
+    {{#unless traded}}
+      {{> players/players-block traded=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>NBA Free Agents</h2>
+
+<ul>
+  {{#each players }}
+    {{#if traded}}
+      {{> players/players-block traded=false}}
+      
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Player</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="player">Player Name:</label>
+    <input type="text" id="player" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="traded">Traded?</label><br>
+    <input type="radio" name="traded" value="1" checked>Traded?<br>
+    <input type="radio" name="traded" value="0"> Traded
+  </div>
+
+  <button type="submit">Add Player</button>
+</form>
