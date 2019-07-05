@@ -1,9 +1,9 @@
 <li>
-	{{name}}
+	<a class="change-trade" data-id="{{id}}" data-traded="{{traded}}">{{name}}</a>
 
-	<button class="change-trade" data-id="{{id}}" data-traded="{{traded}}">
-		{{#if traded}}Traded{{else}}Stay!{{/if}}
-	</button>
+	{{!-- <button class="change-trade" data-id="{{id}}" data-traded="{{traded}}">
+		{{#if traded}}Trade{{else}}Sign onto Roster!{{/if}}
+	</button> --}}
 
-	{{!-- <button data-id="{{id}}" class="trade">Trade</button> --}}
 </li>
+ 
