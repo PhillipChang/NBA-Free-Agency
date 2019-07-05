@@ -1,10 +1,10 @@
 $(function(){
     $(".change-trade").on("click", function(event){
         var id = $(this).data("id");
-        var isTraded = $(this).data("isTraded");
+        var traded = $(this).data("traded");
 
         var newTradeStatus = {
-            traded: isTraded
+            traded: traded
         };
 
         $.ajax("/api/players/" + id, {
@@ -12,7 +12,7 @@ $(function(){
             data: newTradeStatus
         }).then(
             function() {
-                console.log("change traded to", isTraded);
+                console.log("change traded to", newTradeStatus);
                 location.reload();
             }
         );
@@ -22,7 +22,7 @@ $(function(){
         event.preventDefault();
 
         var newPlayer = {
-            player: $("#play").val().trim(),
+            name: $("#play").val().trim(),
             traded: $("[name=traded]:checked").val().trim()
         };
 

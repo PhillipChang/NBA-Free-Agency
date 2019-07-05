@@ -1,20 +1,23 @@
 var express = require("express");
+var router = express.Router();
+
 var nba = require("../models/nba.js");
+
 
 router.get("/", function(req, res) {
   nba.selectAll(function(data) {
     var hbsObject = {
-      nba: data
+      players: data
     };
-    // console.log(hbsObject);
+    // console.log("hbs object",hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/players", function(req, res) {
-  nba.insertOne(["player", "traded"], [req.body.name, req.body.traded], function(result) {
-
+  nba.insertOne(["name", "traded"], [req.body.name, req.body.traded], function(result) {
     res.json({ id: result.insertId });
+    console.log("result from posting",result);
   });
 });
 

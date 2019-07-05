@@ -54,6 +54,7 @@ var orm = {
       }
 
       cb(result);
+    console.log("this is result",result);
     });
   },
   
@@ -74,6 +75,7 @@ var orm = {
 
       cb(result);
     });
+  }
   }
 
 module.exports = orm;
