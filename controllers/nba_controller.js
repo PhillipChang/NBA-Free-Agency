@@ -19,8 +19,6 @@ router.post("/api/players", function(req, res) {
 });
 
 
-
-
 router.put("/api/players/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
