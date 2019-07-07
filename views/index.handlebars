@@ -1,26 +1,40 @@
-<h1>NBA Free Agency!</h1>
+<h1 id="logo"><span class="fas fa-basketball-ball"></span>&nbsp NBA Free Agency!</h1>
 
-<h2>Roster</h2>
-
-<ul>
+<div class="row col-md-12" id="labels">
+  <div>
+  Your Roster 
+  <ul>
   {{#each players}}
     {{#unless traded}}
       {{> players/players-block traded=true}}
     {{/unless}}
   {{/each}}
 </ul>
-
-<h2>NBA Free Agents</h2>
-
-<ul>
+  </div>
+  <div>
+ NBA Free Agents 
+ <ul>
   {{#each players}}
     {{#if traded}}
       {{> players/players-block traded=false}}
     {{/if}}
   {{/each}}
 </ul>
+  </div>
+</div>
 
-<h2>Add a Player</h2>
+{{!-- <div class="collection row" id="roster">
+
+
+</div> --}}
+
+{{!-- 
+
+<div class="collection" id="agent">
+
+</div> --}}
+
+<h2>Add New Player</h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -29,10 +43,10 @@
   </div>
 
   <div class="form-group">
-    <label for="traded">Traded?</label><br>
-    <input type="radio" name="traded" value="0 " checked>Roster<br>
+    <label for="traded">Status:</label>
+    <input type="radio" name="traded" value="0 " checked>Roster
     <input type="radio" name="traded" value="1"> Free Agent
-  </div>
+  </div><br>
 
   <button type="submit">Add Player</button>
 </form>
