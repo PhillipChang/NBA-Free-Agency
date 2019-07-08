@@ -1,4 +1,4 @@
-<h1 id="logo"><span class="fas fa-basketball-ball"></span>&nbsp NBA Free Agency</h1>
+<h1 id="logo"><span class="fas fa-basketball-ball animated rollIn delay-2s"></span>&nbsp NBA Free Agency</h1>
 
 <div class="row col-md-12" id="labels">
   <div id="roster">
@@ -23,16 +23,6 @@
   </div>
 </div>
 
-{{!-- <div class="collection row" id="roster">
-
-
-</div> --}}
-
-{{!-- 
-
-<div class="collection" id="agent">
-
-</div> --}}
 <div class="row" id="add-player">
 <h4 class="form-head">Add New Player</h4>
   <form action="#" class="create-form">
@@ -53,8 +43,16 @@
     <br><br>
     </p>
       <button class="waves-effect waves-light btn-small red accent-4" type="submit"><i class="fas fa-basketball-ball">&nbsp Add Player</i></button>
-
-      {{!-- <a class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>button</a> --}}
-
   </form>
 </div>
+
+
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h4>Are you sure?</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="yes"class="modal-close waves-effect waves-green btn-flat"value="1">Yes</a>
+      <a href="#!" id="no" class="modal-close waves-effect waves-red btn-flat" value="0">No</a>
+    </div>
+  </div>
