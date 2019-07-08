@@ -11,18 +11,23 @@ body{
   text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  rgb(201, 8, 42);
 }
 
-#roster, #agent {
-  width:25%;
-  opacity:0.75;
-}
-
 #roster {
-  margin-left: 25%;
+  background: url("../img/gsw1.jpg");
+  background-size:cover;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 2%;
+  color: rgb(23, 64, 139);
+  text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  gold;
 }
 
-#agent {
-  margin-left: 75%;
-}
+#agents {
+  background: url("../img/background3.jpg");
+  background-size:cover;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 2%;
+} 
 
 #labels {
   text-align: center;
@@ -30,12 +35,50 @@ body{
   justify-content: space-around;
   flex-direction: row;
   font-size:2.5rem; 
-  color: rgb(23, 64, 139);
-  text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  rgb(201, 8, 42);
+  /* color: rgb(23, 64, 139); */
+  /* text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  gold; */
+  margin-left:11%;
+  margin-top:6%;
 }
 
 #logo {
   text-align: center;
   color: rgb(23, 64, 139);
   text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  rgb(201, 8, 42);
+}
+
+#roster-list li:hover {
+  background:url("../img/gsw1.jpg");
+  background-size: contain;
+  /* background-image: linear-gradient(to right, blue , red); */
+  border-radius: 50%;
+}
+
+#agent-list li:hover {
+  background:url("../img/background4.jpg");
+  background-size: contain;
+  /* background-image: linear-gradient(to right, blue , red); */
+  border-radius: 50%;
+}
+a{
+  color:white;
+}
+#agent-header{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  rgb(201, 8, 42);
+}
+
+.btn-small{
+  border-radius: 50%;
+}
+
+
+.form-head {
+  color: red;
+  text-shadow: 1px 1px 2px rgb(201, 8, 42), 0 0 25px rgb(23, 64, 139), 0 0 4px rgb(255, 255, 255) ;
+}
+
+#add-player{
+  /* text-align: center; */
+  margin-left:17%;
 }
