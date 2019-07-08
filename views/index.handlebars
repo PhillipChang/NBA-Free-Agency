@@ -1,9 +1,9 @@
-<h1 id="logo"><span class="fas fa-basketball-ball"></span>&nbsp NBA Free Agency!</h1>
+<h1 id="logo"><span class="fas fa-basketball-ball"></span>&nbsp NBA Free Agency</h1>
 
 <div class="row col-md-12" id="labels">
-  <div>
-  Your Roster 
-  <ul>
+  <div id="roster">
+  <span id="gsw-header">Your Roster</span> 
+  <ul id="roster-list">
   {{#each players}}
     {{#unless traded}}
       {{> players/players-block traded=true}}
@@ -11,9 +11,9 @@
   {{/each}}
 </ul>
   </div>
-  <div>
- NBA Free Agents 
- <ul>
+  <div id="agents">
+ <span id="agent-header">NBA Free Agents</span> 
+ <ul id="agent-list">
   {{#each players}}
     {{#if traded}}
       {{> players/players-block traded=false}}
@@ -33,20 +33,28 @@
 <div class="collection" id="agent">
 
 </div> --}}
+<div class="row" id="add-player">
+<h4 class="form-head">Add New Player</h4>
+  <form action="#" class="create-form">
+    <div class="col s3">
+    <label for="player"><h6>Player Name:</h6></label>
+    <input class="player-input" type="text" id="play" name="name">
+    </div><br><br><br><br>
+    <p>
+      <label>
+        <input name="traded" type="radio" value="0" checked />
+        <span>Roster</span>
+      </label>
+      &NonBreakingSpace;
+      <label>
+        <input name="traded" type="radio" value ="1" />
+        <span>Agent</span>
+      </label>
+    <br><br>
+    </p>
+      <button class="waves-effect waves-light btn-small red accent-4" type="submit"><i class="fas fa-basketball-ball">&nbsp Add Player</i></button>
 
-<h2>Add New Player</h2>
-<form class="create-form">
+      {{!-- <a class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>button</a> --}}
 
-  <div class="form-group">
-    <label for="player">Player Name:</label>
-    <input type="text" id="play" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="traded">Status:</label>
-    <input type="radio" name="traded" value="0 " checked>Roster
-    <input type="radio" name="traded" value="1"> Free Agent
-  </div><br>
-
-  <button type="submit">Add Player</button>
-</form>
+  </form>
+</div>
