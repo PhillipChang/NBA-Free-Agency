@@ -81,3 +81,23 @@ a{
 #add-player{
   margin-left:17%;
 }
+
+.modal{
+  background-color:rgb(55,55,55);
+  color:white;
+}
+#yes, #no{
+  color:black;
+  text-shadow:0 0 25px rgb(23, 64, 139), 0 0 4px rgb(255, 255, 255) ;
+  font-size:1.5rem;
+}
+#yes:hover{
+  background-color:green;
+}
+#no:hover{
+  background-color:red;
+}
+
+.delete{
+  border-radius:50%;
+}
