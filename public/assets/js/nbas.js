@@ -1,3 +1,6 @@
+$(document).ready(function(){
+$('.tooltipped').tooltip();
+});
 $(function(){
     $(".change-trade").on("click", function(event){
         var id = $(this).data("id");

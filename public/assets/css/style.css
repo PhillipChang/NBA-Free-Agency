@@ -100,5 +100,16 @@ a{
 
 .delete{
   border-radius:50%;
+}
+
+#add {
+  color:blue;
+}
+
+#trade{
+  color:orangered;
+}
+
+#delete{
   color:red;
 }
