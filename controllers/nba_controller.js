@@ -53,7 +53,6 @@ router.delete("/api/players/:id", function(req, res) {
    nba.delete(condition, function(result) {
     console.log("DELETE RESPONSE", result)
      if (result.affectedRows === 0) {
-        // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
       }
       else

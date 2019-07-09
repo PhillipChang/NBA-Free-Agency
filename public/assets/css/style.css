@@ -36,8 +36,6 @@ body{
   justify-content: space-around;
   flex-direction: row;
   font-size:2.5rem; 
-  /* color: rgb(23, 64, 139); */
-  /* text-shadow: 1px 1px 2px rgb(23, 64, 139), 0 0 25px rgb(255, 255, 255), 0 0 4px  gold; */
   margin-left:11%;
   margin-top:6%;
 }
@@ -51,14 +49,12 @@ body{
 #roster-list li:hover {
   background:url("../img/gsw1.jpg");
   background-size: contain;
-  /* background-image: linear-gradient(to right, blue , red); */
   border-radius: 50%;
 }
 
 #agent-list li:hover {
   background:url("../img/background4.jpg");
   background-size: contain;
-  /* background-image: linear-gradient(to right, blue , red); */
   border-radius: 50%;
 }
 a{
@@ -78,9 +74,15 @@ a{
   text-shadow: 1px 1px 2px rgb(201, 8, 42), 0 0 25px rgb(23, 64, 139), 0 0 4px rgb(255, 255, 255) ;
 }
 
+.player-input{
+  color:white;
+  font-size: 1rem;
+}
+
 #add-player{
   margin-left:17%;
 }
+
 
 .modal{
   background-color:rgb(55,55,55);
