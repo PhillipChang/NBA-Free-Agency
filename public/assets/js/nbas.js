@@ -3,7 +3,7 @@ $(function(){
         var id = $(this).data("id");
         var traded = $(this).data("traded");
         $(document).ready(function(){
-            $('.modal').modal();
+             $('.modal').modal();
         $("#yes").on("click",function(){
             var newTradeStatus = {
                 traded: traded
@@ -54,4 +54,20 @@ $(function(){
         alert("You have not filled out player's name");
     }
     });
+
+
+    $(".delete").on("click", function(event) {
+
+        var id = $(this).data("id");
+        var queryURL = "/api/players/" + id
+    
+        // Send the DELETE request.
+        $.ajax(queryURL,{
+          type: "DELETE"
+        }).then(function(res){
+            console.log("deleted id ", id);
+            // Reload the page to get the updated list
+            location.reload();
+          })
+      });
 });

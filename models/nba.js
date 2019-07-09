@@ -19,13 +19,13 @@ var nba = {
     orm.updateOne("players", objColVals, condition, function(res) {
       cb(res);
     });
-  }
+  },
 
-//   delete: function(condition, cb){
-//     orm.delete("players", condition, function(res) {
-//       cb(res);
-//     });
-//   }
+  delete: function(condition, cb){
+    orm.delete("players", condition, function(res) {
+      cb(res);
+    });
+  }
 };
 
 module.exports = nba;
