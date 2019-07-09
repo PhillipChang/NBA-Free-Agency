@@ -1,6 +1,6 @@
 # NBA-Free-Agency
 
-[Deployed Link](https://git.heroku.com/free-agency-nba.git)
+[Deployed Link](https://free-agency-nba.herokuapp.com/)
 
 ### Landing Page
 ![Main-Screen](public/assets/img/website.jpg)
